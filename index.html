@@ -22,31 +22,20 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      body,
-      html {
+      body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
+        display: grid;
+        place-content: center;
+        width: 100vw;
+        height: 100vh;
       }
 
       .container {
-        display: grid;
-        place-items: center;
-        /* width: 100vw;*/
-        height: 100vh;
-      }
-      .container-center {
-        width: 100%;
-        height: 100%;
-        background-color: hsl(212, 45%, 89%);
-        display: grid;
-        place-items: center;
-        /* padding: 100px 0; */
-      }
-      .inner-container {
         width: 350px;
+        height: auto;
         background-color: hsl(0, 0%, 100%);
         box-shadow: 0 0 10px 4px rgba(202, 202, 202, 0.5);
         display: flex;
@@ -79,6 +68,15 @@
         color: hsl(220, 15%, 55%);
       }
 
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
       @media screen and (min-width: 1440px) {
         .container-center {
           width: 80%;
@@ -89,20 +87,25 @@
   </head>
   <body>
     <main class="container">
-      <div class="container-center">
-        <div class="inner-container">
-          <div class="image">
-            <img src="./images/image-qr-code.png" alt="" />
-          </div>
-          <div class="content">
-            <h1>Improve your frontend skills by building projects.</h1>
-            <p>
-              Scan the QR code to visit Frontend Mentor and take your coding
-              skills to the next level
-            </p>
-          </div>
-        </div>
+      <div class="image">
+        <img src="./images/image-qr-code.png" alt="" />
       </div>
-    </ma>
+      <div class="content">
+        <h1>Improve your frontend skills by building projects.</h1>
+        <p>
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://portfolio-mozahedul.vercel.app/">Mozahedul Islam</a>
+      </div>
+    </footer>
   </body>
 </html>
